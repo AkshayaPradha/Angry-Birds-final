@@ -26,6 +26,8 @@ var log2;
 var log3;
 var log4;
 
+var platform;
+
 var bird;
 
 var backgroundImage;
@@ -49,8 +51,10 @@ function setup() {
   box2 = new Box(800,350,60,60);
   box3 = new Box(600,270,60,60);
   box4 = new Box(800,270,60,60);
-  
+
+
   ground = new Ground(600,390,1200,20);
+  platform = new Ground(100,360,300,150)
   
   pig1 = new Pig(700,350);
   pig2 = new Pig(700,270);
@@ -70,7 +74,7 @@ function draw() {
 
   rectMode(CENTER);
   
-
+  platform.display();
   ground.display();
 
   box1.display();
@@ -88,4 +92,6 @@ function draw() {
   log4.display();
 
   bird.display();
+
+ 
 }
